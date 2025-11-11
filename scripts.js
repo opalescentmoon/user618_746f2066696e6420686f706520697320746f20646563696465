@@ -1,3 +1,26 @@
+//disable
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.addEventListener('keydown', function (e) {
+  // F12
+  if (e.key === 'F12') {
+    e.preventDefault();
+  }
+  // Ctrl+Shift+I
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+    e.preventDefault();
+  }
+  // Ctrl+Shift+J
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
+    e.preventDefault();
+  }
+  // Ctrl+U
+  if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+    e.preventDefault();
+  }
+});
+
 //disble drag
 const element = document.querySelectorAll('.shard');
   // Disable dragstart event
@@ -52,6 +75,21 @@ const mainImg = document.getElementById('mainimg');
 const altImg = document.getElementById('altimg');
 
 let hasSwapped = false;
+
+//autoplay
+
+aud.muted = true;
+
+aud.play().then(() => {
+
+  setTimeout(() => {
+    aud.muted = false;
+  }, 200);
+}).catch(error => {
+
+  console.error('Autoplay failed:', error);
+
+});
 
 function checkViewPort() {
   if (window.innerWidth < 1200) {
