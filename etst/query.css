@@ -1,0 +1,29 @@
+/* Mobile devices  */
+@media screen and (max-width: 1200px) {
+
+    .main-container {
+        visibility: none;
+    }
+
+    .error-container {
+        display: block;
+    }
+
+    #etherstrike {
+        display: none;
+    }
+
+}
+
+/* Desktop devices (min-width: 768px) */
+@media screen and (min-width: 1200px) {
+    
+    .main-container {
+        visibility: visible;
+    }
+
+    .error-container {
+        display: none;
+    }
+
+}

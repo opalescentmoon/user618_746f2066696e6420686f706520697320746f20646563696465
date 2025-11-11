@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>█</title>
+    <link rel="icon" href="./assets/KaLos618.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="query.css">
+</head>
+
+<body>
+
+    <div class="error-container">
+
+        <div class="error-text">
+
+            <p>Please resize your viewport or switch to a more suitable device to access this content.</p>
+        
+        </div>
+
+    </div>
+
+    <div class="main-container">
+
+        <div class="overlay-img">
+            <img id="overlay" src="assets/white_fx.png" alt="Main Image">
+        </div>
+
+        <div class="full-screen-whiteout" id="whiteout">
+
+        </div>
+
+        <div class="dialogue-area">
+            <div class="dialogue-box">
+                <p id="dialogues">
+                    
+                </p>
+            </div>
+
+            <div class="countdown-box">
+                <p id="countdown">
+                    
+                </p>
+            </div>
+        </div>
+
+        <div class="rotate-container" id="rotation">
+            
+
+            <div class="text-area">
+                <div class="text-box-quest">
+                    <p id="objective">
+                        Hover on a shard to read a secret note!
+                    </p>
+                </div>
+            </div>
+
+            <!-- SHARD SECTION -->
+            <div class="shard-container">
+
+
+                <div class="shard-wrap">
+
+                    <div id="tribbie" class="shard">
+                        <div class="shard-text">
+                            <p>To discover a █ is to go beyond the darkness. Why don't we fly across the sea of stars next time? We'll enjoy the light show from the stars together!</p>
+                        </div>
+                        <button id="tribbie1" class="shard-btn" onclick="console.log('clock')" disabled>
+                            <div class="shard-img">
+                                <img src="assets/Character_Tribbie_Eidolon_4.png" alt="test img">
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="hyacine" class="shard">
+                        <div class="shard-text">
+                            <p>Please don't cry, your smile is the light the world needs. Let's try our best to erase the █ in our hearts.</p>
+                        </div>
+                        <button id="hyacine2" class="shard-btn" disabled>
+                            <div class="shard-img">
+                                <img src="assets/Character_Hyacine_Eidolon_4.png" alt="test img">
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="shard-wrap">
+
+                    <div id="mydei" class="shard">
+                        <div class="shard-text">
+                            <p>Go forward. Your glory awaits within conflict. Don't █.</p>
+                        </div>
+                        <button id="mydei3" class="shard-btn" disabled> 
+                            <div class="shard-img">
+                                <img src="assets/Character_Mydei_Eidolon_3.png" alt="test">
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="anaxa" class="shard">
+                        <div class="shard-text">
+                            <p>For what is the truth when you prefer hiding beneath false hope? The truth is, the heart of conflict leads to █.</p>
+                        </div>
+                        <button id="anaxa6" class="shard-btn" disabled>
+                            <div class="shard-img">
+                                <img src="assets/Character_Anaxa_Eidolon_3.png" alt="test">
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="phainon" class="shard">
+                        <div class="shard-text">
+                            <p>I will bring the long-deserved deliverance to this world conflicted with a █ verdict.</p>
+                        </div>
+                        <button id="phainon8" class="shard-btn" disabled>
+                            <div class="shard-img">
+                                <img src="assets/Character_Phainon_Eidolon_3.png" alt="test">
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="shard-wrap">
+
+                    <div id="cipher" class="shard">
+                        <div class="shard-text">
+                            <p>Living in misbeliefs do still leads somewhere, right? Your █ still mean something.</p>
+                        </div>
+                        <button id="cipher4" class="shard-btn" disabled>
+                            <div class="shard-img">
+                                <img src="assets/Character_Cipher_Eidolon_3.png" alt="test">
+                            </div>
+                        </button>
+                    </div>
+
+                    <div id="castorice" class="shard">
+                        <div class="shard-text">
+                            <p>Some things never die. Hearing it again, it wonderfully do sounded █.</p>
+                        </div>
+                        <button id="castorice5" class="shard-btn" disabled>
+                            <div class="shard-img">
+                                <img src="assets/Character_Castorice_Eidolon_4.png" alt="test img">
+                            </div>
+                        </button>
+                        
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="additional-video">
+            <video id="vid">
+                <source src="assets/blink.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+
+        <div class="alt-video">
+            <video id="alt-vid">
+                <source src="assets/ethstr-vid-alt.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+
+        <div class="main-img">
+            <img id="altimg" src="assets/ethstr_alt.png" class="fade-img" alt="Alt Image">
+            <img id="mainimg" src="assets/ethstr_template.png" class="fade-img visible" alt="Main Image">
+        </div>
+        
+
+        <audio id="etherstrike" autoplay>
+            <source src="assets/ether-strike.mp3" type="audio/mpeg">
+            Your browser does not support the audio element
+        </audio>
+
+    </div>
+
+    <script src="scripts.js" defer></script>
+</body>
+
+</html>
