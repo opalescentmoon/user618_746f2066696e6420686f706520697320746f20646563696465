@@ -84,7 +84,7 @@ aud.play().then(() => {
 
   setTimeout(() => {
     aud.muted = false;
-  }, 200);
+  }, 500);
 }).catch(error => {
 
   console.error('Autoplay failed:', error);
