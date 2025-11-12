@@ -491,6 +491,12 @@ aud.addEventListener('timeupdate', () => {
 
   } else if (t >= 129 && t < 130 && lastCue != 129) {
     timeUI.classList.remove('active');
+    
+    shard_btns.forEach(btn => {
+      btn.removeEventListener('click', verifyAnswer);
+      btn.disabled = true;
+    });
+    
     lastCue = 129;
 
   } else if (t >= 136 && t < 137 && lastCue != 136) {
@@ -501,6 +507,7 @@ aud.addEventListener('timeupdate', () => {
 
   } else if (t >= 148 && t < 149 && lastCue != 148) {
     whiteout.classList.add('active');
+    lastCue = 148;
 
   } else if (t >= 149 && t < 150 && lastCue != 149) {
     if (hasAnswered === 0 && correctAnswers === 0) {
