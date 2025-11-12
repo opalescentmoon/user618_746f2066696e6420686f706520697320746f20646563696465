@@ -75,27 +75,38 @@ const mainImg = document.getElementById('mainimg');
 const altImg = document.getElementById('altimg');
 
 let hasSwapped = false;
+let hasClicked = false;
 
 //autoplay
 
-aud.muted = true;
+function processClick() {
 
-aud.play().then(() => {
+  document.addEventListener('click', () => {
+    hasClicked = true;
+    aud.muted = true;
+    aud.volume = 1.0;
 
-  setTimeout(() => {
-    aud.muted = false;
-  }, 500);
-}).catch(error => {
+    aud.play().then(() => {
+      setTimeout(() => {
+        aud.muted = false;
+      }, 200);
+    }).catch(err => {
+      console.error('autoplay failed:', err);
+    });
 
-  console.error('Autoplay failed:', error);
+  }, { once: true });
 
-});
+}
 
 function checkViewPort() {
-  if (window.innerWidth < 1200) {
-    aud.pause();
-  } else {
-    aud.play();
+  if (hasClicked) {
+
+    if (window.innerWidth < 1200) {
+      aud.pause();
+    } else {
+      aud.play();
+    }
+
   }
 }
 
@@ -295,6 +306,12 @@ let lastCue = null;
 checkViewPort();
 
 window.addEventListener('resize', checkViewPort);
+
+document.addEventListener('DOMContentLoaded', () => {
+  typeWriter("Objective: finish the blank. Press anywhere to start.", dial, 50, 3000);
+  processClick();
+});
+
 
 aud.addEventListener('timeupdate', () => {
   const t = aud.currentTime;
